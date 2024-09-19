@@ -24,22 +24,21 @@ This project is a simple login application built with **React** on the frontend 
    ```bash
    git clone https://github.com/your-username/login-app.git
 2. Install the dependencies for both client and server:
- ```bash
-cd login-app
-npm install
-cd client
-npm install
+    ```bash
+    cd login-app
+    npm install
+    cd client
+    npm install
 
 3. Run the backend server:
-```bash
-cd ..
-npm start
+   ```bash
+   cd ..
+   npm start
 
 4. Start the React frontend:
-```bash
-cd client
-npm start
-Usage
+   ```bash
+   cd client
+   npm start
 
 6. Navigate to the login page.
 Enter your username and password.
