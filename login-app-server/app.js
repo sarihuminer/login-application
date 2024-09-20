@@ -1,17 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const bankRoutes = require('./routes/bank');
 const cors = require('cors');
 const app = express();
 const PORT = 5000;
+const users = require('./db/users');
+
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
 
-// Dummy user data
-let users = [{ username: 'sara', password: '12345' }];
+app.use('/bank', bankRoutes);
 
-// Login route
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     const user = users.find(u => u.username === username && u.password === password);
