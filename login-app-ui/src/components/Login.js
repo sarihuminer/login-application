@@ -13,7 +13,7 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:5000/login', { username, password });
       localStorage.setItem('username', response.data.username); // Save to localStorage
-      navigate('/dashboard');
+      navigate('/account-details');
     } catch (error) {
       setError({
         username: true,
